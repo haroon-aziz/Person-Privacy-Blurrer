@@ -1,11 +1,3 @@
-"""
-Person Privacy Blurrer
-Blur people in videos for privacy using Ultralytics ObjectBlurrer.
-
-Usage:
-    python blur_people.py --source input.mp4 --output output_blur.mp4
-"""
-
 import argparse
 
 import cv2
@@ -14,7 +6,7 @@ from ultralytics import solutions
 
 def main():
     parser = argparse.ArgumentParser(description="Blur people in a video for privacy.")
-    parser.add_argument("--source", required=True, help="Path to input video")
+    parser.add_argument("--source", default="YOUR VIDEO FILE HERE", help="Path to input video")
     parser.add_argument("--output", default="output_blur.mp4", help="Path to output .mp4")
     parser.add_argument("--model", default="yolo26n.pt", help="YOLO model weights")
     parser.add_argument("--blur-ratio", type=float, default=0.5, help="Blur intensity (0-1)")
@@ -22,7 +14,7 @@ def main():
     parser.add_argument("--iou", type=float, default=0.6, help="NMS IoU threshold (higher keeps overlapping people)")
     parser.add_argument("--imgsz", type=int, default=1280, help="Inference size (higher detects smaller people)")
     parser.add_argument("--show", action="store_true", help="Show live preview window (not for Colab)")
-    args = parser.parse_args()
+    args = parser.parse_args([]) # Pass an empty list to ignore kernel arguments
 
     cap = cv2.VideoCapture(args.source)
     assert cap.isOpened(), f"Error reading video: {args.source}"
