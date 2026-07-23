@@ -64,8 +64,8 @@ Press **q** in the preview window to quit. The webcam script defaults to `--imgs
 ### Google Colab
 
 ```python
-!git clone https://github.com/YOUR_USERNAME/person-blurrer.git
-%cd person-blurrer
+!git clone https://github.com/haroon-aziz/Person-Privacy-Blurrer.git
+%cd Person-Privacy-Blurrer
 !pip install -r requirements.txt
 !python blur_people.py --source /content/my_video.mp4 --output /content/output_blur.mp4
 ```
