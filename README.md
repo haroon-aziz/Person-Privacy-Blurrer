@@ -6,7 +6,7 @@ Useful for publishing footage of public places (streets, events, storefronts) wh
 
 ## Demo
 
-![Person blurring demo](assets/demo.jpg)
+![Person blurring demo](assets/demo.png)
 
 *People detected and blurred automatically, frame by frame.*
 
