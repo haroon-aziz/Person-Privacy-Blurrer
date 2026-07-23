@@ -1,15 +1,4 @@
-"""
-Person Privacy Blurrer — Webcam / Live Stream
-Blur people in real time from a webcam (or any live stream URL).
 
-Usage:
-    python blur_webcam.py                    # default webcam (index 0)
-    python blur_webcam.py --source 1         # second camera
-    python blur_webcam.py --record out.mp4   # also save the blurred stream
-
-Press "q" in the preview window to quit.
-Note: requires a display — for headless/Colab use blur_people.py on a video file instead.
-"""
 
 import argparse
 
